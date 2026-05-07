@@ -291,12 +291,11 @@ We also provide an interesting case for evaluation. A student who uses OpenClaw 
 
 <a id="evalmethod"></a>
 <details>
-<summary><b>Evaluation Setting</b> — Both student and teacher use AI!</summary>
+<summary><b>Evaluation Setting</b> — Both student, TA and teacher use AI!</summary>
 
-We find that, under the combined optimization method, OpenClaw needs only 36 problem-solving interactions in the student setting and 24 grading interactions in the teacher setting to achieve a significant and clearly visible improvement.
 
 <p align="center">
-  <img src="assets/openclawrl1performance.png"  alt="Overview"  width="750">
+  <img src="assets/example.pdf"  alt="Overview"  width="750">
 </p>
 
 See [`./openclaw-test/README.md`](./openclaw-test/README.md) for setup and algorithm details. Example of evaluation [results](https://github.com/Gen-Verse/OpenClaw-RL/blob/main/openclaw-test/results.txt).
