@@ -102,7 +102,7 @@ export PRM_M="${PRM_M:-3}"  # judge votes per turn; topk-select keeps all accept
 export OPENCLAW_OPD_TEACHER_LP_MAX_CONCURRENCY="${OPENCLAW_OPD_TEACHER_LP_MAX_CONCURRENCY:-1}"
 
 # combine_loss-style RL+OPD weighting
-export OPENCLAW_TOPK_W_RL="${OPENCLAW_TOPK_W_RL:-0.0}"
+export OPENCLAW_TOPK_W_RL="${OPENCLAW_TOPK_W_RL:-1.0}"
 export OPENCLAW_TOPK_W_OPD="${OPENCLAW_TOPK_W_OPD:-1.0}"
 # clip is important in stabilizing the training
 export OPENCLAW_TOPK_ADV_DIFF_CLIP="${OPENCLAW_TOPK_ADV_DIFF_CLIP:-1.0}"
@@ -261,7 +261,7 @@ ray start --head --node-ip-address "${MASTER_ADDR}" --num-gpus "${NUM_GPUS}" --d
 
 RUNTIME_ENV_JSON="{
   \"env_vars\": {
-    \"PYTHONPATH\": \"${REPO_ROOT}/Megatron-LM:${SCRIPT_DIR}:${REPO_ROOT}/openclaw-opd:${REPO_ROOT}/hint_opt_exp:${SLIME_ROOT}\",
+    \"PYTHONPATH\": \"${REPO_ROOT}/Megatron-LM:${SCRIPT_DIR}:${REPO_ROOT}/openclaw-opd:${SLIME_ROOT}\",
     \"CUDA_DEVICE_MAX_CONNECTIONS\": \"1\",
     \"OPENCLAW_EVAL_MODE\": \"${OPENCLAW_EVAL_MODE}\",
     \"OPENCLAW_COMBINE_OPD_TEACHER_SOURCE\": \"${OPENCLAW_COMBINE_OPD_TEACHER_SOURCE}\",
